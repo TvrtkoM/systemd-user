@@ -1,0 +1,9 @@
+[Unit]
+Description=StartX
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/startx
+
+[Install]
+WantedBy=default.target

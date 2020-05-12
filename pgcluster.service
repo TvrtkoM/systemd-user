@@ -1,0 +1,15 @@
+[Unit]
+Description=PostgreSQL Cluster 11-tvrtko
+After=basic.target
+
+[Service]
+RuntimeDirectory=./postgres
+PassEnvironment=HOME
+Type=forking
+ExecStart=/bin/zsh -c "${HOME}/bin/pg_ctl start"
+ExecStop=/bin/zsh -c "${HOME}/bin/pg_ctl -m fast stop"
+ExecReload=/bin/zsh -c "${HOME}/bin/pg_ctl reload"
+PIDFile=%E/postgres/postmaster.pid
+
+[Install]
+WantedBy=default.target

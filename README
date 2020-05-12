@@ -1,0 +1,5 @@
+clone to ~/.config/systemd/user and run:
+> systemctl --user enable startx.service
+> systemctl --user enable pgcluster.service
+
+postgresql cluster needs to be installed in ~/.config/postgres (PGDATA env var)
