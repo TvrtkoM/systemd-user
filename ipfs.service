@@ -1,0 +1,9 @@
+[Unit]
+Description=IPFSDaemon
+
+[Service]
+Type=simple
+ExecStart=/home/tvrtko/bin/ipfs daemon
+
+[Install]
+WantedBy=default.target
